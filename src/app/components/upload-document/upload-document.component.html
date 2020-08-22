@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Télécharger un document</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form ngForm="form" #form>
+    <div class="form-group">
+      <label>Document</label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFile">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button (click)="uploadDocument()" class="btn btn-primary"> <i class="fa fa-upload"></i>Télécharger</button>
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Fermer</button>
+</div>

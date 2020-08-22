@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h4">Evènements</h1>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <bs-datepicker-inline
+      [bsValue]="bsInlineValue"
+      [bsConfig]="{ containerClass : 'theme-default'}"
+    ></bs-datepicker-inline>
+    <div class="mt-4">
+      <tabset>
+        <tab>
+          <ng-template tabHeading>
+            <span class="badge badge-secondary">Evènements à venir</span>
+          </ng-template>
+          <div class="mt-2">
+            <div class="shadow-sm p-3 mb-1 bg-white rounded">
+              <div class="d-flex">
+                <i class="fa fa-clock-o fa-3x"></i>
+                <div class="ml-3">
+                  <h6>Réunion de début de Sprint</h6>
+                  <span>11.15 à 12h</span>
+                </div>
+              </div>
+            </div>
+            <div class="shadow-sm p-3 mb-1 bg-white rounded">
+              <div class="d-flex">
+                <i class="fa fa-smile-o fa-3x"></i>
+                <div class="ml-3">
+                  <h6>Skype coach agile n° 7</h6>
+                  <span>11.15 à 12h</span>
+                </div>
+              </div>
+            </div>
+            <div class="shadow-sm p-3 mb-1 bg-white rounded">
+              <div class="d-flex">
+                <i class="fa fa-users fa-3x"></i>
+                <div class="ml-3">
+                  <h6>Afterwork</h6>
+                  <span>11.15 à 12h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab>
+          <ng-template tabHeading>
+            <span class="badge badge-secondary">Mes événements</span>
+          </ng-template>
+
+          <div class="shadow-sm p-3 mb-1 bg-white rounded">
+            <div class="d-flex">
+              <i class="fa fa-smile-o fa-3x"></i>
+              <div class="ml-3">
+                <h6>Skype coach agile n° 7</h6>
+                <span>11.15 à 12h</span>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-sm p-3 mb-1 bg-white rounded">
+            <div class="d-flex">
+              <i class="fa fa-users fa-3x"></i>
+              <div class="ml-3">
+                <h6>Afterwork</h6>
+                <span>11.15 à 12h</span>
+              </div>
+            </div>
+          </div>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <app-event-list></app-event-list>
+  </div>
+</div>

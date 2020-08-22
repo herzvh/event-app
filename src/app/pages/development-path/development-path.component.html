@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h4">Parcours du développement</h1>
+</div>
+<div class="shadow-sm p-3 mb-2 bg-white rounded">
+  <button class="btn btn-default mb-3" (click)="backClicked()">
+    <i class="fa fa-chevron-left"></i> Retour
+  </button>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="d-flex justify-content-between">
+        <h6>Lire le cahier des charges</h6>
+        Deadline: 08.06.2020
+      </div>
+      <p>La lecture du cahier de charge  comporte un document de 50 pages. Vous pouvez quitter  la lercture  et la reprendre  à tout moment</p>
+      <ngx-doc-viewer [url]="docURL" viewer="google" style="width:100%;height:60vh;"></ngx-doc-viewer>
+    </div>
+    <div class="col-md-3">
+      <a class="btn btn-lg btn-outline-info w-100" target="_blank" [href]="docURL">
+        <i class="fa fa-download"></i> Télécharger le document
+      </a>
+      <button class="btn btn-lg btn-primary mt-3 w-100" (click)="uploadDocument()">
+        <i class="fa fa-upload"></i> Uploader le document
+      </button>
+
+      <div class="mt-5 d-flex align-items-center flex-column">
+        <button class="btn btn-default mt-3 w-100" (click)="saveDocument()">
+          <i [class]="saved ? 'fa fa-heart' : 'fa fa-heart-o'"></i> Sauvegarder
+        </button>
+        <button class="btn btn-primary mt-3 w-100" (click)="finalizeDocument()">
+          Finir plus tard
+        </button>
+        <button class="btn btn-success mt-3 w-100" (click)="validateDocument()">
+          Valider l'action
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
